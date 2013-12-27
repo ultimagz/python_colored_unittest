@@ -14,7 +14,9 @@ or use it as a direct replacement for unittest:<br/>
 Pass case show with green<br/>
 Fail case show with red<br/>
 Error case show with bold red<br/>
-Error list show with red blink and cyan test case name<br/>
+Error list show with red blink and cyan test case name<br/><br/>
+![alt text](http://imageshack.com/a/img713/8210/2n2g.png)<br/><br/>
+![alt text](http://imageshack.com/a/img849/5452/sv7h.png)<br/>
 
 Don't support Django!
 ---------------------
