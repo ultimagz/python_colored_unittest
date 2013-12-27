@@ -4,7 +4,7 @@ Colored text result from running your test case <br/>
 Modified from unittest Python 2.7.6 <br/>
 (src ref: http://fossies.org/dox/Python-2.7.6/dir_c61f991b169d218562edfd1ce43ccbb3.html)
 
-HOW To USE
+HOW TO USE
 ----------
 Download and import package in your code: <br/>
     `import python_colored_unittest` <br/>
