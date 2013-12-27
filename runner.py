@@ -87,7 +87,7 @@ class TextTestResult(result.TestResult):
                 return case_name
 
     def startTest(self, test):
-        pass
+        super(TextTestResult, self).startTest(test)
 
     def addSuccess(self, test):
         super(TextTestResult, self).addSuccess(test)
@@ -196,10 +196,11 @@ class TextTestRunner(object):
         if hasattr(result, 'separator2'):
             self.stream.writeln(result.separator2)
         run = result.testsRun
+        print run
         self.stream.writeln("Ran %d test%s in %.3fs" %
                             (run, run != 1 and "s" or "", timeTaken))
         self.stream.writeln()
-
+        self.stream.writeln("%s %d\n%s %d\n%s %d" % result.getSummary())
         expectedFails = unexpectedSuccesses = skipped = 0
         try:
             results = map(len, (result.expectedFailures,
@@ -210,7 +211,6 @@ class TextTestRunner(object):
         else:
             expectedFails, unexpectedSuccesses, skipped = results
 
-        self.stream.writeln("%s %d\n%s %d\n%s %d" % result.getSummary())
         if skipped:
             self.stream.writeln("   SKIPPED:%d" % skipped)
         if expectedFails:
